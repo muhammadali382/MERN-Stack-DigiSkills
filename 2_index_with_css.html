@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User registration form">
+    <meta name="author" content="Muhammad Ali">
+    <meta name="keywords" content="HTML, form, registration, web development">
+    <title>Registration Form</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        margin: 0;
+        padding: 40px 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: inline-block;
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #333;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    button {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 8px;
+    }
+
+    button[type="submit"] {
+        background: #222;
+        color: white;
+    }
+
+    button[type="reset"] {
+        background: #ddd;
+    }
+
+    button:hover {
+        opacity: 0.85;
+    }
+</style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="/submit" method="post">
+        <!-- First Name -->
+        <label for="firstName">First Name:</label>
+        <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter your first name"
+            required
+        >
+        <br><br>
+        <!-- Last Name -->
+        <label for="lastName">Last Name:</label>
+        <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter your last name"
+            required
+        >
+        <br><br>
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+        <br><br>
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+        >
+        <br><br>
+        <!-- Contact Number -->
+        <label for="contact">Contact Number:</label>
+        <input
+            type="tel"
+            id="contact"
+            name="contact"
+            placeholder="+92 300 1234567"
+            required
+        >
+        <br><br>
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+        >
+        <br><br>
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br><br>
+        <!-- Country -->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="pakistan">Pakistan</option>
+            <option value="india">India</option>
+            <option value="usa">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="canada">Canada</option>
+            <option value="australia">Australia</option>
+            <option value="germany">Germany</option>
+            <option value="uae">United Arab Emirates</option>
+        </select>
+
+        <br><br>
+
+        <!-- City -->
+        <label for="city">City:</label>
+        <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter your city"
+        >
+
+        <br><br>
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <br>
+
+        <textarea
+            id="address"
+            name="address"
+            rows="4"
+            cols="40"
+            placeholder="Enter your address"
+        ></textarea>
+
+        <br><br>
+
+        <!-- Website -->
+        <label for="website">Website:</label>
+        <input
+            type="url"
+            id="website"
+            name="website"
+            placeholder="https://google.com"
+        >
+
+        <br><br>
+
+        <!-- Profile Picture -->
+        <label for="profile">Profile Picture:</label>
+        <input
+            type="file"
+            id="profile"
+            name="profile"
+            accept="image/*"
+        >
+
+        <br><br>
+
+        <!-- Skills -->
+        <label>Skills:</label>
+
+        <input type="checkbox" id="html" name="skills" value="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="skills" value="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="javascript" name="skills" value="javascript">
+        <label for="javascript">JavaScript</label>
+
+        <input type="checkbox" id="react" name="skills" value="react">
+        <label for="react">React</label>
+
+        <br><br>
+
+        <!-- Terms and Conditions -->
+        <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required
+        >
+
+        <label for="terms">
+            I agree to the Terms and Conditions
+        </label>
+
+        <br><br>
+
+        <!-- Buttons -->
+        <button type="submit">Register</button>
+
+        <button type="reset">Reset</button>
+
+    </form>
+
+</body>
+</html>
