@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User registration form">
+    <meta name="author" content="Muhammad Ali">
+    <meta name="keywords" content="HTML, form, registration, web development">
+    <title>Registration Form</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 bg-gray-100 px-5 py-10 font-sans">
+
+    <h1 class="mb-6 text-center text-3xl font-bold">
+        Registration Form
+    </h1>
+
+    <form
+        action="/submit"
+        method="post"
+        class="mx-auto max-w-2xl rounded-lg bg-white p-8 shadow-md"
+    >
+
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+
+            <!-- First Name -->
+            <div class="flex flex-col">
+                <label
+                    for="firstName"
+                    class="mb-1.5 font-medium"
+                >
+                    First Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Enter your first name"
+                    required
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+            </div>
+
+            <!-- Last Name -->
+            <div class="flex flex-col">
+                <label
+                    for="lastName"
+                    class="mb-1.5 font-medium"
+                >
+                    Last Name:
+                </label>
+
+                <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Enter your last name"
+                    required
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+            </div>
+
+            <!-- Email -->
+            <div class="flex flex-col">
+                <label
+                    for="email"
+                    class="mb-1.5 font-medium"
+                >
+                    Email:
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+            </div>
+
+            <!-- Password -->
+            <div class="flex flex-col">
+                <label
+                    for="password"
+                    class="mb-1.5 font-medium"
+                >
+                    Password:
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+            </div>
+
+            <!-- Contact -->
+            <div class="flex flex-col">
+                <label
+                    for="contact"
+                    class="mb-1.5 font-medium"
+                >
+                    Contact Number:
+                </label>
+
+                <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    placeholder="+92 300 1234567"
+                    required
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="flex flex-col">
+                <label
+                    for="dob"
+                    class="mb-1.5 font-medium"
+                >
+                    Date of Birth:
+                </label>
+
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+            </div>
+
+            <!-- Country -->
+            <div class="flex flex-col">
+                <label
+                    for="country"
+                    class="mb-1.5 font-medium"
+                >
+                    Country:
+                </label>
+
+                <select
+                    id="country"
+                    name="country"
+                    required
+                    class="mb-4 w-full rounded border border-gray-300 bg-white p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+                    <option value="">Select your country</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="india">India</option>
+                    <option value="usa">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="uae">United Arab Emirates</option>
+                </select>
+            </div>
+
+            <!-- City -->
+            <div class="flex flex-col">
+                <label
+                    for="city"
+                    class="mb-1.5 font-medium"
+                >
+                    City:
+                </label>
+
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="Enter your city"
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+            </div>
+
+            <!-- Gender -->
+            <div class="col-span-full mt-2.5">
+                <label class="mb-2 block font-medium">
+                    Gender:
+                </label>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <label class="flex items-center gap-1.5">
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male"
+                        >
+                        Male
+                    </label>
+
+                    <label class="flex items-center gap-1.5">
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female"
+                        >
+                        Female
+                    </label>
+
+                    <label class="flex items-center gap-1.5">
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="other"
+                        >
+                        Other
+                    </label>
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="col-span-full flex flex-col">
+                <label
+                    for="address"
+                    class="mb-1.5 font-medium"
+                >
+                    Address:
+                </label>
+
+                <textarea
+                    id="address"
+                    name="address"
+                    rows="4"
+                    placeholder="Enter your address"
+                    class="mb-4 w-full resize-y rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                ></textarea>
+            </div>
+
+            <!-- Website -->
+            <div class="flex flex-col">
+                <label
+                    for="website"
+                    class="mb-1.5 font-medium"
+                >
+                    Website:
+                </label>
+
+                <input
+                    type="url"
+                    id="website"
+                    name="website"
+                    placeholder="https://google.com"
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px] outline-none focus:border-gray-900"
+                >
+            </div>
+
+            <!-- Profile Picture -->
+            <div class="flex flex-col">
+                <label
+                    for="profile"
+                    class="mb-1.5 font-medium"
+                >
+                    Profile Picture:
+                </label>
+
+                <input
+                    type="file"
+                    id="profile"
+                    name="profile"
+                    accept="image/*"
+                    class="mb-4 w-full rounded border border-gray-300 p-2.5 text-[15px]"
+                >
+            </div>
+
+            <!-- Skills -->
+            <div class="col-span-full mt-2.5">
+                <label class="mb-2 block font-medium">
+                    Skills:
+                </label>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <label class="flex items-center gap-1.5">
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="html"
+                        >
+                        HTML
+                    </label>
+
+                    <label class="flex items-center gap-1.5">
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="css"
+                        >
+                        CSS
+                    </label>
+
+                    <label class="flex items-center gap-1.5">
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="javascript"
+                        >
+                        JavaScript
+                    </label>
+
+                    <label class="flex items-center gap-1.5">
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="react"
+                        >
+                        React
+                    </label>
+                </div>
+            </div>
+
+            <!-- Terms -->
+            <div class="col-span-full mt-2.5 flex items-center">
+                <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    required
+                    class="mr-2"
+                >
+
+                <label for="terms">
+                    I agree to the Terms and Conditions
+                </label>
+            </div>
+
+            <!-- Buttons -->
+            <div class="col-span-full mt-2.5 flex gap-2.5">
+                <button
+                    type="submit"
+                    class="rounded bg-gray-900 px-5 py-2.5 text-white transition hover:opacity-85"
+                >
+                    Register
+                </button>
+
+                <button
+                    type="reset"
+                    class="rounded bg-gray-300 px-5 py-2.5 transition hover:opacity-85"
+                >
+                    Reset
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+</body>
+</html>
